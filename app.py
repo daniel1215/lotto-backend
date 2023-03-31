@@ -34,11 +34,21 @@ def generate():
     
     explanations = []
     for i, num in enumerate(lotto_numbers):
-        explanations.append(
-            f"{num} is chosen for you because your name's numerology is {name_numerology}, "
-            f"which is associated with the {i + 1}th number generated. "
-            f"Your date of birth, {dob}, and the current time also contribute to the choice of this number."
-        )
+        if i == 0:
+            explanations.append(
+                f"{num} is chosen based on the mystical vibrations of your name, "
+                f"which resonates with the energy of number {name_numerology}. "
+                f"The {i + 1}th number generated is influenced by the cosmic alignment "
+                f"on your date of birth, {dob}. "
+                f"Numerology and the universe conspire to bring you this unique number."
+            )
+        else:
+            explanations.append(
+                f"{num} is chosen based on the interplay of cosmic forces and "
+                f"the energies that surround you. The {i + 1}th number generated "
+                f"reveals the hidden patterns of your life, as influenced by your date of birth, {dob}. "
+                f"Embrace the magic of the universe as it unveils this significant number."
+            )
     
     response = {
         'lottoNumbers': lotto_numbers,
